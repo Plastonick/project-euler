@@ -37,7 +37,7 @@ def get_ev(n_takes, n_gives) -> Fraction:
 # fact, 2 is _probably_ the limit to what player A can
 # expect to make.
 
-target = 1.7
+target = 1.9999
 i = 0
 while True:
     ev = get_ev(i, i)
