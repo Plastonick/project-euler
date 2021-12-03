@@ -37,14 +37,12 @@ def ev(n_takes, n_gives) -> Fraction:
     return evs[address]
 
 
-print(ev(1, 1))
-
-target = 1.7
+target = 1.9999
 i = 0
 while True:
     expected_value = ev(i, i)
     if expected_value > target:
-        print(i, expected_value)
+        print(i)
         break
 
     i += 1
