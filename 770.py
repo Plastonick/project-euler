@@ -1,5 +1,6 @@
 from fractions import Fraction
 import sys
+import time
 
 sys.setrecursionlimit(10000)
 
@@ -37,6 +38,7 @@ def ev(n_takes, n_gives) -> Fraction:
     return evs[address]
 
 
+start = time.time_ns()
 target = 1.9999
 i = 0
 while True:
@@ -46,3 +48,6 @@ while True:
         break
 
     i += 1
+
+time_taken = round((time.time_ns() - start) / 1_000_000_000, 2)
+print(time_taken, "seconds")
